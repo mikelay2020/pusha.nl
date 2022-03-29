@@ -1,0 +1,8 @@
+.myBtn {/*создаем класс*/
+    padding: 5px 15px;/*отступы*/
+    color: teal;/*цвет*/
+    font-size: 14px;/*размер шрифта*/
+    background: transparent;/*цвет заднего фона - прозрачный*/
+    border: 1px solid rgb(20, 110, 50);/*рамка толщиной в 1 пиксель, сплошная, темнозеленая*/
+    cursor: pointer;
+}
