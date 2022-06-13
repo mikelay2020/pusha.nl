@@ -24,8 +24,6 @@ export const useRoutes = isAuthenticated => {
                 </Route>
                 <Redirect to='/' />
             </Switch>
-
-
         )
     }
     return ( /* если юзер авторизован */
