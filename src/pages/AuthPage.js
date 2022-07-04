@@ -19,21 +19,12 @@ export const AuthPage = () => {
   }, [error, message, clearError])
 
 
-<<<<<<< HEAD
-  const [post, setGetRes] = useState([])
-
-  async function getResponse() {
-    const response = await axios.get('api/v1/user/2')
-    console.log(response)
-    setGetRes(response.data)
-=======
   useEffect(() => {
       window.M.updateTextFields()
   }, [])
 
   const changeHandler = event => {
       setForm({ ...form, [event.target.name]: event.target.value })
->>>>>>> a78ef49522bdec19cd031d36645f92d0ee5135da
   }
 
   const loginHandler = async () => {
@@ -44,53 +35,6 @@ export const AuthPage = () => {
       } catch (e) { }
   }
   return (
-<<<<<<< HEAD
-    <div>
-      <ul>
-      <li><Link to="/"> Home</Link></li>
-                <li><Link to="/signin">Sign in</Link></li>
-                <li><Link to="/signup">Sign up</Link></li>
-      </ul>
-
-      <div className="form-auth">
-        <h2>Авторизоваться</h2>
-
-        <form>
-          <label for="Email">Ваше мыло:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Введите ваше Мыло"
-          />
-
-          <label for="password">Ваш пароль:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Введите пароль"
-          />
-
-          <button>Войти</button>
-        </form>
-
-      </div>
-
-
-
-  <div className="formSignIn">
-        <h1>Hello {post.LoginName}</h1>
-        <button onClick={getResponse}> Get запрос</button>
-        <p>LoginName = {post.LoginName}</p>
-        <p>TypeId = {post.TypeId}</p>
-        <p>ConnectedId = {post.ConnectedId}</p>
-        <p>Password = {post.Password}</p>
-      </div>
-
-
-    </div>
-=======
       <div>
           <nav>
               <div className="grey darken-2 nav-wrapper">
@@ -143,6 +87,5 @@ export const AuthPage = () => {
               </div>
           </div>
       </div>
->>>>>>> a78ef49522bdec19cd031d36645f92d0ee5135da
   )
 }
