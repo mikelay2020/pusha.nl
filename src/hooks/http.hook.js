@@ -5,7 +5,7 @@ export const useHttp = () => { //внутри этого хука будем с�
     const [loading, setLoading] = useState(false) // сущность setLoading, если происходит процесс загрузки
     const [error, setError] = useState(null) // и сущность ошибка, если они есть
 
-    const request = useCallback(async (url, method = 'GET', body = null, headers = {}) => { // useCallback первый параметр набор зависимостей второй параметр пустй объект [] он ниже
+    const request = useCallback(async (url, method = 'POST', body = null, headers = {}) => { // useCallback первый параметр набор зависимостей второй параметр пустй объект [] он ниже
         setLoading(true) // когда пошел запро то true
         try {
             if (body) {

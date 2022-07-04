@@ -1,7 +1,8 @@
 // проверка комита
 import { BrowserRouter as Router } from 'react-router-dom'; // чтобы работал компонент Swich
-import { useRoutes } from './route'
+import { useRoutes } from './routes'
 import './app.css'
+import 'materialize-css'
 
 function App() {
   const routes = useRoutes(true)
