@@ -19,13 +19,13 @@ export const AuthPage = () => {
 
 
 
-  // const [post, setGetRes] = useState([])
+  const [post, setGetRes] = useState([])
 
-  // async function getResponse() {
-  //   const response = await axios.get('api/v1/user/2')
-  //   console.log(response)
-  //   setGetRes(response.data)
-  // }
+  async function getResponse() {
+    const response = await axios.get('api/v1/user/2')
+    console.log(response)
+    setGetRes(response.data)
+  }
 
   return (
     <div>
@@ -62,7 +62,7 @@ export const AuthPage = () => {
 
 
 
-      {/* <div className="formSignIn">
+  <div className="formSignIn">
         <h1>Hello {post.LoginName}</h1>
         <button onClick={getResponse}> Get запрос</button>
         <p>LoginName = {post.LoginName}</p>
@@ -70,7 +70,7 @@ export const AuthPage = () => {
         <p>ConnectedId = {post.ConnectedId}</p>
         <p>Password = {post.Password}</p>
       </div>
- */}
+
 
     </div>
   )
