@@ -15,7 +15,6 @@ export const useHttp = () => { //внутри этого хука будем с�
 
             const response = await fetch(url, { method, body, headers }) // метод fetch принимает 2 параметра url, и{набор опций} называть надо как в API
             const data = await response.json()
-
             if (!response.ok) { // если при запросе возникла ошибка
                 throw new error(data.message || 'Что-то пошло не так')
             }

@@ -29,7 +29,7 @@ export const useAuth = () => {
     if (data && data.token) {
       login(data.token, data.userId)
     }
-    setReady(true)
+    setReady(false)
   }, [login])
 
   return { login, logout, token, userId, ready }

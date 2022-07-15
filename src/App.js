@@ -1,19 +1,28 @@
 // проверка комита
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'; // чтобы работал компонент Swich
 import { useRoutes } from './routes'
+import {useAuth} from './hooks/auth.hook'
+import {AuthContext} from './context/AuthContext'
 import './app.css'
 import 'materialize-css'
 
 function App() {
-  const routes = useRoutes(true)
+  const {token, login, logout, userId} = useAuth()
+  const isAuthenticated =!!token
+  const routes = useRoutes(isAuthenticated)
   
   return (
-
+    <AuthContext.Provider value={{
+      token, login, logout, userId, isAuthenticated}}>
     <Router>
       <div>
         {routes}
       </div>
-    </Router>
+      </Router>
+
+    </AuthContext.Provider>
+    
 
     
   )

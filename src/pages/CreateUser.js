@@ -45,7 +45,7 @@ export const CreateUser = () => {
         <div>
             <nav>
                 <div className="grey darken-2 nav-wrapper">
-                    <a href="#" className="brand-logo">Pusha.nl</a>
+                    {/* <a href="#" className="brand-logo">Pusha.nl</a> */}
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><Link to="/"> Home</Link></li>
                         <li><Link to="/signin">Sign in</Link></li>

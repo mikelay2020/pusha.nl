@@ -1,5 +1,5 @@
 {
-  "name": "new_frontend",
+  "name": "pusha.nl",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,8 +10,8 @@
     "materialize-css": "^1.0.0-rc.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "5.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -26,7 +26,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "http://pusha.nl:8080",
+  "proxy": "http://new.pusha.nl:8080",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,16 +39,16 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "mikelay has your",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikelay2020/https---github.com-mikelay2020-webPusha.git"
+    "url": "git+https://github.com/mikelay2020/pusha.nl#readme.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mikelay2020/https---github.com-mikelay2020-webPusha/issues"
+    "url": "https://github.com/mikelay2020/pusha.nl#readme/issues"
   },
-  "homepage": "https://github.com/mikelay2020/https---github.com-mikelay2020-webPusha#readme"
+  "homepage": "https://github.com/mikelay2020/pusha.nl#readme"
 }
