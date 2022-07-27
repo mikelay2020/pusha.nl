@@ -6,42 +6,6 @@ import Link from 'react-router-dom/Link'
 import 'materialize-css'
 
 export const AuthPage = () => {
-    // так работало
-    //     const [form, setForm] = useState({
-    //         LoginName: '', Password: ''
-    //     })
-    //     const changeHandler = event => {
-    //         setForm({ ...form, [event.target.name]: event.target.value })
-    //     }
-
-    //     function sendRecuest() {
-    //         const headers = {
-    //             'Content-Type': 'application/json'
-    //         }
-    //         return fetch('api/v1/signin', {
-    //             method: 'POST',
-    //             body: JSON.stringify({...form}),
-    //             headers: headers
-    //         }).then(response => {
-    //             if (response.ok) {
-    //                 return response.text()
-    //             }
-    //             authification = true
-    //             return response.text().then(error => {
-    //                 const e = new Error('ашыпка')
-    //                 e.data = error
-    //                 throw e
-    //             })
-    //         })
-
-
-    //     }
-    // const body = {
-    //     LoginName: "Spiderman",
-    //     Password: "123"
-    // }
-    // sendRecuest('POST', recuestUrl, body)
-
     const auth = useContext(AuthContext)
     const message = useMessage()
     const { loading, request, error, clearError } = useHttp()
@@ -53,7 +17,6 @@ export const AuthPage = () => {
         message(error)
         clearError()
     }, [error, message, clearError])
-
 
     useEffect(() => {
         window.M.updateTextFields()
@@ -67,13 +30,8 @@ export const AuthPage = () => {
         try {
            const data = await request('/api/v1/signin', 'POST', { ...form })
            auth.login(data.Token, data.LoginName)
-           console.log (data)
-           console.log (data.Token)
-
         } catch (e) { }
     }
-
-
 
     return (
         <div>
@@ -86,7 +44,6 @@ export const AuthPage = () => {
                     </ul>
                 </div>
             </nav>
-
 
             <div className="row">
                 <div className="col s6 offset-s3">
@@ -124,7 +81,6 @@ export const AuthPage = () => {
                             </button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
